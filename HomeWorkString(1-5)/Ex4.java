@@ -22,7 +22,7 @@ public class Ex4 {
 
         //create a case sensitve
         String lowercaseOrignal = string.toLowerCase();
-        String lowercaseReverse = string.toLowerCase();
+        String lowercaseReverse = getString.toLowerCase();
 
 
         //check if both lowercase and uppercase can be read backward
