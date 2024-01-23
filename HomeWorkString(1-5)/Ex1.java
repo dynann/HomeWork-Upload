@@ -1,3 +1,10 @@
+/*Group 12
+   -Ra Phearom
+   -Phan Sovannarith
+   -Ran Fidynann
+   -Yang Sokkheang  */
+
+
 public class Ex1 {
     public static void main(String[] args) {
 
