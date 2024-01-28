@@ -34,6 +34,7 @@ public class Ex3 {
                         System.out.println("Your password must have exactly 8 characters.");
 
                         // Exit the program as soon as a special character is found
+                        // stop the JVM (return without value mean System.exist())
                         return; 
                     }
 
