@@ -32,6 +32,7 @@ public class Ex8 {
 
                     //alert user
                     System.out.println("password must always start with a digit");
+                    return;
 
                 }
 
