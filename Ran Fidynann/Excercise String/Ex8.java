@@ -27,7 +27,7 @@ public class Ex8 {
 
                 }
 
-                //check if the first letter of password doesn't start with digit
+                //check if the first character of password doesn't start with digit
                 if ((i == 0) && !(Character.isDigit(_currentChar))) {
 
                     //alert user
