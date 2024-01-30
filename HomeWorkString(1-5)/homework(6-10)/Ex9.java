@@ -2,7 +2,7 @@ package week4;
 
 import java.util.Scanner;
 
-public class Ex4 {
+public class Ex9 {
     public static void main(String[] args) {
 
         // create scanner obj and insert value
