@@ -27,7 +27,7 @@ public class Ex5 {
             
 
             // check the word and condition of the first index
-            if(i == 0 && Character.isDigit(sentence.charAt(i + 1))){
+            if(i == 0 && Character.isLetter(chSentence)){
                 wordCount++;
             }
             else if(Character.isWhitespace(chSentence) && Character.isLetter(sentence.charAt(i + 1))){
