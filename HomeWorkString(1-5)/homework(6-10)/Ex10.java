@@ -2,16 +2,16 @@ package week4;
 
 import java.util.Scanner;
 
-public class Ex10 {
+public class Ex5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // user to enter a sentence
+        // Prompt user to enter a sentence
         System.out.print("Enter a sentence: ");
         String sentence = scanner.nextLine();
         scanner.close();
 
-        // define the count variable
+        // Calculate and display the results
         int wordCount = 0;
         int consonantCount = 0;
         int vowelCount = 0;
@@ -27,10 +27,10 @@ public class Ex10 {
             
 
             // check the word and condition of the first index
-            if(i == 0){
+            if(i == 0 && Character.isDigit(sentence.charAt(i + 1))){
                 wordCount++;
             }
-            else if(Character.isWhitespace(chSentence)){
+            else if(Character.isWhitespace(chSentence) && Character.isLetter(sentence.charAt(i + 1))){
                 wordCount++;
             }
 
@@ -60,7 +60,6 @@ public class Ex10 {
             }
         }
 
-        // find consonent
         consonantCount = consonantCount - vowelCount;
 
         System.out.println("\nAnalysis of the entered sentence:");
