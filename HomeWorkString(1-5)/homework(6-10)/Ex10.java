@@ -6,12 +6,12 @@ public class Ex10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt user to enter a sentence
+        // user to enter a sentence
         System.out.print("Enter a sentence: ");
         String sentence = scanner.nextLine();
         scanner.close();
 
-        // Calculate and display the results
+        // define the count variable
         int wordCount = 0;
         int consonantCount = 0;
         int vowelCount = 0;
@@ -55,11 +55,12 @@ public class Ex10 {
             }
 
             // check the special cha
-            if(!Character.isLetterOrDigit(chSentence) && !Character.isWhitespace(chSentence)){
+            if(!Character.isLetterOrDigit(chSentence)){
                 specialCharCount++;
             }
         }
 
+        // find consonent
         consonantCount = consonantCount - vowelCount;
 
         System.out.println("\nAnalysis of the entered sentence:");
