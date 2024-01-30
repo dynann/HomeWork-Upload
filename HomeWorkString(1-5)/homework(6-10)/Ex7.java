@@ -8,7 +8,7 @@ public class Ex7 {
 
         System.out.print("Enter String : ");
         String getString = scan.nextLine();
-
+        scan.close();
 
         StringBuilder cleanString = new StringBuilder(getString);
 
