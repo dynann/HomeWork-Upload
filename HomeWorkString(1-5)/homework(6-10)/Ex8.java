@@ -14,6 +14,7 @@ public class Ex8 {
         Scanner _getPassword = new Scanner(System.in);
         System.out.print("Enter Passwords : ");
         String _password = _getPassword.nextLine();
+        _getPassword.close();
 
         boolean checkLetterOrDigit = false;
         boolean checkDigit = false;
