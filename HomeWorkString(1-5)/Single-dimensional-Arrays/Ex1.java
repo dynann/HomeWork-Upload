@@ -1,3 +1,9 @@
+/*Group 12
+   -Ra Phearom
+   -Phan Sovannarith
+   -Ran Fidynann
+   -Yang Sokkheang  */
+
 import java.util.Scanner;
 
 public class Ex1 {
