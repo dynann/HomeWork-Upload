@@ -1,43 +1,30 @@
 import java.util.Scanner;
 
 public class Ex7 {
-    public static void main(String[] Args) {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        //create an object scanner and string
-        Scanner scan = new Scanner(System.in);
+        // Prompt the user to enter a sentence
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        
+        // Split the sentence into words using regular expression
+        String[] words = sentence.split("[^a-zA-Z]+");
 
-        System.out.print("Enter String : ");
-        String getString = scan.nextLine();
-        scan.close();
+        // Initialize a variable to store the longest word
+        String longestWord = "";
 
-        StringBuilder cleanString = new StringBuilder(getString);
-
-
-        //iterate through each character in string
-        for (int i = 0; i < cleanString.length(); i++) {
-            char currentChar = cleanString.charAt(i);
-
-            //check if the first letter at the first index is lowercase then convert uppercase
-            if ((i == 0) && Character.isLowerCase(currentChar)) {
-
-                cleanString.setCharAt(i, Character.toUpperCase(currentChar));
-            }
-
-            //check if the letter of the first of word is lowercase then convert to uppercase
-            else if ((i >= 1) && Character.isLowerCase(currentChar) && ((cleanString.charAt(i - 1)) == ' ')) {
-
-                cleanString.setCharAt(i, Character.toUpperCase(currentChar));
-            }
-
-            //check if the letter that is not the first of word is uppercase then convert lowercase
-            else if ((i >= 1) && ((cleanString.charAt(i - 1)) != ' ') && (Character.isUpperCase(currentChar)))  {
-
-                cleanString.setCharAt(i, Character.toLowerCase(currentChar));
+        // Find the longest word
+        for (String word : words) {
+            if (word.length() > longestWord.length()) {
+                longestWord = word;
             }
         }
 
-        //display clean string
-        System.out.println("Old String : " + getString);
-        System.out.println("Clean String : " + cleanString);
+        // Display the longest word
+        System.out.println("The longest word in the sentence is: " + longestWord);
+        
+        // Close the scanner to release resources
+        scanner.close();
     }
 }
