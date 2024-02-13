@@ -8,11 +8,8 @@ public class Exercise10 {
         String hundred = "hundred"; // String representation of "hundred"
 
         //arrays to store string representations of digits
-        String[] teenDigit = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
-                "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-                "seventeen", "eighteen", "nineteen", ""};
-        String[] secondDigit = {"", "ten", "twenty", "thirty", "forty", "fifty", "sixty",
-                "seventy", "eighty", "ninety", ""};
+        String[] teenDigit = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", ""};
+        String[] secondDigit = {"", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", ""};
 
         //check if input number is within the valid range
         if (0 <= getNum && getNum <= 999) {
@@ -22,8 +19,10 @@ public class Exercise10 {
             int b = getNum / 10;
             int second_digit = b % 10;
             int d = getNum / 100;
-            int last_digit = d % 10;
             int last_two_digits = getNum % 100;
+            System.out.println(first_digit);
+            System.out.println(d);
+
 
             if (getNum < 20) {
                 //print the string representation directly
@@ -34,23 +33,32 @@ public class Exercise10 {
                 System.out.println(secondDigit[second_digit] + " " + teenDigit[first_digit]);
             } else if (getNum < 1000) {
 
-                if (last_two_digits < 20 && first_digit != 0) {
+                if (last_two_digits < 20) {
 
                     //print the string representation of the hundred's place,
                     // "hundred", and the string representation of the last two digits
-                    System.out.println(teenDigit[d] + " " + hundred + " " + teenDigit[last_two_digits]);
+                    if (first_digit == 0 && second_digit == 0) {
 
-                } else if (last_two_digits < 20) {
+                        //print number ends with 2 zeros
+                        System.out.println(teenDigit[d] + " " + hundred);
+
+                    } else {
+
+                        System.out.println(teenDigit[d] + " " + hundred + " " + teenDigit[last_two_digits]);
+
+                    }
+
+                } else if (last_two_digits >= 20) {
 
                     if (first_digit == 0) {
 
-                        //avoid first digit ends with 0
-                        System.out.println(teenDigit[last_digit] + " " + hundred + " " + secondDigit[second_digit]);
+                        //if first digit ends with 0 print last and second digit
+                        System.out.println(teenDigit[d] + " " + hundred + " " + secondDigit[second_digit]);
+
                     } else {
 
-
-                        System.out.println(teenDigit[last_digit] + " " + hundred + " " +
-                                secondDigit[second_digit] + " " + teenDigit[first_digit]);
+                        //print full form
+                        System.out.println(teenDigit[d] + " " + hundred + " " + secondDigit[second_digit] + " " + teenDigit[first_digit]);
                     }
 
                 }
