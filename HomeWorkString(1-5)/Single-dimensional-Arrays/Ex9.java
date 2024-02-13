@@ -1,6 +1,6 @@
 //reverse individual string
 
-public class Exercise9 {
+public class Ex9 {
     public static void main(String[] args) {
 
         //create original string, modified string, array string
