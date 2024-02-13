@@ -1,6 +1,6 @@
 //locker game
 
-public class Exercise8 {
+public class Ex8 {
     public static void main(String[] Args) {
         boolean[] lockers = new boolean[51];
         int countLocker = 0;
