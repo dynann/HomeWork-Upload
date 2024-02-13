@@ -1,9 +1,15 @@
+/*Group 12
+   -Ra Phearom
+   -Phan Sovannarith
+   -Ran Fidynann
+   -Yang Sokkheang  */
+
 
 //remove duplicated numbers in a string
 
 import java.util.Scanner;
 
-public class Exercise6 {
+public class Ex6 {
     public static void main(String[] args){
 
         //create an object scanner
