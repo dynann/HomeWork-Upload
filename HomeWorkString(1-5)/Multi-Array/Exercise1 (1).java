@@ -1,3 +1,9 @@
+/*Group 12
+   -Ra Phearom
+   -Phan Sovannarith
+   -Ran Fidynann
+   -Yang Sokkheang  */
+
 //sum matrix 3x3 from user input
 
 import java.util.Scanner;
