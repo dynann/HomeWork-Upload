@@ -1,3 +1,4 @@
+//sort 2D array
 import java.util.Arrays;
 
 public class Exercise5 {
@@ -25,7 +26,7 @@ public class Exercise5 {
               }
            }
 
-           //swaping x and y to its right position
+           //swapping x and y to its right position
            if(currentIndex != i){
                arrays[currentIndex][1] = arrays[i][1];
                arrays[i][1] = yCurrent;
@@ -35,7 +36,7 @@ public class Exercise5 {
            }
 
         }
-        //dispaly sorted 2D array
+        //display sorted 2D array
         System.out.print(Arrays.deepToString(arrays));
     }
 }
