@@ -1,3 +1,5 @@
+//sum matrix 3x3 from user input
+
 import java.util.Scanner;
 
 public class Exercise1 {
